@@ -38,7 +38,7 @@ const bottomFeatures = features.slice(2);
 
 export default function WhyHomeey() {
   return (
-    <section className="min-h-screen bg-black text-white px-6 py-20">
+    <section id="services" className="min-h-screen bg-black text-white px-6 py-20">
       {/* Heading */}
       <h2 className="text-center text-4xl font-semibold mb-14">
         Why Midas Star?
@@ -50,7 +50,6 @@ export default function WhyHomeey() {
   {/* Top row */}
   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
     {topFeatures.map((item, index) => {
-      const Icon = item.icon;
 
       return (
         <div
@@ -59,8 +58,8 @@ export default function WhyHomeey() {
           bg-gradient-to-br from-[#0f3b2e]/80 to-[#0b1f18]/80
           p-6 backdrop-blur-xl"
         >
-          <div className="mb-4 w-10 h-10 rounded-full flex items-center justify-center">
-            <Image src={item.icon} alt={item.title} width={200} height={200} />
+          <div className="flex relative items-start justify-start">
+            <Image src={item.icon} alt={item.title} width={160} height={160} />
           </div>
 
           <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -75,7 +74,6 @@ export default function WhyHomeey() {
   {/* Bottom row – FULL WIDTH */}
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     {bottomFeatures.map((item, index) => {
-      const Icon = item.icon;
 
       return (
         <div
@@ -84,8 +82,8 @@ export default function WhyHomeey() {
           bg-gradient-to-br from-[#0f3b2e]/80 to-[#0b1f18]/80
           p-6 backdrop-blur-xl"
         >
-          <div className="mb-4 w-10 h-10 rounded-full flex items-center justify-center">
-            <Image src={item.icon} alt={item.title} width={300} height={300} />
+          <div className="flex relative items-start justify-start">
+            <Image src={item.icon} alt={item.title} width={160} height={160} />
           </div>
 
           <h3 className="text-lg font-semibold mb-2">{item.title}</h3>

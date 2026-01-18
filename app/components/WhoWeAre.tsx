@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 
 type FeatureItem = {
@@ -48,9 +49,14 @@ const FEATURES: FeatureItem[] = [
   },
 ];
 
+const handleScroll = () => {
+    const section = document.getElementById("main");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
 export default function WhoWeAre() {
   return (
-    <section className="relative py-32 px-6 sm:px-10 overflow-visible">
+    <section id="about" className="relative py-32 px-6 sm:px-10 overflow-visible">
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(87,204,155,0.12),transparent_60%),linear-gradient(to_bottom,#0a0f0d,#000)]" />
 
@@ -90,7 +96,8 @@ export default function WhoWeAre() {
                 ))}
               </ul>
 
-              <button className="bg-brand text-black px-6 py-3 rounded-xl font-medium hover:opacity-90 transition">
+              <button className="bg-brand cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
+              onClick={handleScroll}>
                 Learn More
               </button>
             </div>

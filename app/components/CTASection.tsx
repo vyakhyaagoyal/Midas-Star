@@ -1,4 +1,11 @@
+"use client"
 export default function CTASection() {
+
+    const handleScroll = () => {
+    const section = document.getElementById("main");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="relative min-h-screen bg-black flex items-center justify-center px-6">
       {/* Outer glow */}
@@ -25,7 +32,7 @@ export default function CTASection() {
         {/* Description */}
         <p className="max-w-2xl mx-auto text-sm md:text-base text-white/70 leading-relaxed mb-10">
           Ready to boost your agency’s growth with digital solutions built for
-          Dubai? Get in touch and we’ll show you how Homeey can help—quickly and
+          Dubai? Get in touch and we’ll show you how Midas Star can help—quickly and
           reliably.
         </p>
 
@@ -33,12 +40,14 @@ export default function CTASection() {
         <button
           className="
             inline-flex items-center gap-2
-            rounded-lg bg-emerald-500
+            rounded-lg bg-brand
             px-6 py-3
             text-sm font-medium text-black
-            hover:bg-emerald-400
+            hover:bg-brand/90
             transition-colors
+            cursor-pointer
           "
+          onClick={handleScroll}
         >
           Contact Us
         </button>

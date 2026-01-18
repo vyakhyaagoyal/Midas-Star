@@ -12,7 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <Image src='/midas_star_logo2.png' alt="Midas Star Logo" width={150} height={50} />
+            <Image src='/midas_star_logo2.png' alt="Midas Star Logo" width={150} height={50}
+            className="mb-4" />
 
             <p className="text-sm text-white/70 leading-relaxed max-w-sm">
               Empowering businesses with innovative solutions.
@@ -62,7 +63,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 text-center text-xs text-white/50">
-          ©2025 Homeey. All Rights Reserved
+          ©2025 Midas Star. All Rights Reserved
         </div>
       </div>
     </footer>
