@@ -21,7 +21,7 @@ export default function Testimonials() {
         {testimonials.map((text, index) => (
           <div
             key={index}
-            className="rounded-2xl border border-white/10 bg-white/[0.03] px-8 py-10 text-gray-200
+            className="rounded-2xl border border-white/10 bg-white/3 px-8 py-10 text-gray-200
                        backdrop-blur-sm shadow-[0_0_0_1px_rgba(87,204,155,0.15)]"
           >
             <p className="text-sm leading-relaxed">{text}</p>

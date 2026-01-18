@@ -76,7 +76,7 @@ const InfiniteScroll = ({ isReversed = false, className }: InfiniteScrollProps) 
         {DOUBLE_ELEMENTS.map((item, index) => (
           <div
             key={index}
-            className="flex items-center gap-4 text-white text-lg font-medium w-[250px] text-center leading-tight"
+            className="flex items-center gap-4 text-white text-lg font-medium w-62.5 text-center leading-tight"
             style={{
               whiteSpace: "normal", // ✅ allow wrapping
               wordWrap: "break-word", // ✅ break long words cleanly

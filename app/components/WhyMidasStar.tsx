@@ -55,7 +55,7 @@ export default function WhyHomeey() {
         <div
           key={index}
           className="col-span-2 relative rounded-2xl border border-white/10
-          bg-gradient-to-br from-[#0f3b2e]/80 to-[#0b1f18]/80
+          bg-linear-to-br from-[#0f3b2e]/80 to-[#0b1f18]/80
           p-6 backdrop-blur-xl"
         >
           <div className="flex relative items-start justify-start">
@@ -79,7 +79,7 @@ export default function WhyHomeey() {
         <div
           key={index}
           className="relative rounded-2xl border border-white/10
-          bg-gradient-to-br from-[#0f3b2e]/80 to-[#0b1f18]/80
+          bg-linear-to-br from-[#0f3b2e]/80 to-[#0b1f18]/80
           p-6 backdrop-blur-xl"
         >
           <div className="flex relative items-start justify-start">

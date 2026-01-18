@@ -17,7 +17,7 @@ export default function CTASection() {
           relative z-10 w-full max-w-5xl
           rounded-[2.5rem]
           border border-white/10
-          bg-gradient-to-br from-[#0f2f25] via-[#0b1f18] to-[#08140f]
+          bg-linear-to-br from-[#0f2f25] via-[#0b1f18] to-[#08140f]
           px-8 py-16 md:px-16 md:py-20
           text-center
           shadow-[0_0_120px_rgba(34,197,94,0.15)]

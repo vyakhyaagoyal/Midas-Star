@@ -26,7 +26,7 @@ export default function Navbar() {
         {/* Center: Links */}
         <ul className="hidden md:flex items-center gap-10 text-md text-gray-300">
           <li
-            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-[2px]
+            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-0.5
             after:w-0 after:bg-brand hover:after:w-full after:transition-all"
             onClick={() => scrollTo("about")}
           >
@@ -34,7 +34,7 @@ export default function Navbar() {
           </li>
 
           <li
-            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-[2px]
+            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-0.5
             after:w-0 after:bg-brand hover:after:w-full after:transition-all"
             onClick={() => scrollTo("services")}
           >
@@ -42,7 +42,7 @@ export default function Navbar() {
           </li>
 
           <li
-            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-[2px]
+            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-0.5
             after:w-0 after:bg-brand hover:after:w-full after:transition-all"
             onClick={() => scrollTo("main")}
           >
