@@ -1,5 +1,7 @@
 "use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const scrollTo = (id: string) => {
@@ -8,11 +10,21 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full fixed top-0 z-50 backdrop-blur-xl">
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="w-full fixed top-0 z-50 backdrop-blur-xl"
+    >
       <nav className="mx-auto flex items-center justify-between px-12 py-2 rounded-xl max-w-8xl">
         
         {/* Left: Logo */}
-        <div className="flex items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.15, duration: 0.4, ease: "easeOut" }}
+          className="flex items-center"
+        >
           <Image
             src="/midas_star_logo2.png"
             alt="Midas Star Logo"
@@ -21,43 +33,49 @@ export default function Navbar() {
             className="cursor-pointer"
             onClick={() => scrollTo("main")}
           />
-        </div>
+        </motion.div>
 
         {/* Center: Links */}
-        <ul className="hidden md:flex items-center gap-10 text-md text-gray-300">
-          <li
-            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-0.5
-            after:w-0 after:bg-brand hover:after:w-full after:transition-all"
-            onClick={() => scrollTo("about")}
-          >
-            About
-          </li>
-
-          <li
-            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-0.5
-            after:w-0 after:bg-brand hover:after:w-full after:transition-all"
-            onClick={() => scrollTo("services")}
-          >
-            Services
-          </li>
-
-          <li
-            className="relative cursor-pointer after:absolute after:-bottom-1 after:left-0 after:h-0.5
-            after:w-0 after:bg-brand hover:after:w-full after:transition-all"
-            onClick={() => scrollTo("main")}
-          >
-            Contact
-          </li>
+        <ul className="hidden md:flex items-center gap-10 text-lg text-gray-300">
+          {[
+            { label: "About", id: "about" },
+            { label: "Services", id: "services" },
+            { label: "Contact", id: "main" },
+          ].map((item, i) => (
+            <motion.li
+              key={item.label}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2 + i * 0.08,
+                duration: 0.4,
+                ease: "easeOut",
+              }}
+              onClick={() => scrollTo(item.id)}
+              className="relative cursor-pointer
+                after:absolute after:-bottom-1 after:left-0 after:h-0.5
+                after:w-0 after:bg-brand hover:after:w-full
+                after:transition-all"
+            >
+              {item.label}
+            </motion.li>
+          ))}
         </ul>
 
         {/* Right: CTA */}
-        <button
-          className="bg-brand cursor-pointer text-black px-5 py-2 rounded-xl font-medium hover:opacity-90 transition"
+        <motion.button
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45, duration: 0.4, ease: "easeOut" }}
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 0.97 }}
           onClick={() => scrollTo("main")}
+          className="bg-brand cursor-pointer text-black px-5 py-2
+            rounded-xl font-medium hover:opacity-90 transition"
         >
           Contact Us
-        </button>
+        </motion.button>
       </nav>
-    </header>
+    </motion.header>
   );
 }

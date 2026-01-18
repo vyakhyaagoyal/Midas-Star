@@ -1,5 +1,7 @@
-"use client"
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type FeatureItem = {
   title: string;
@@ -32,7 +34,7 @@ const FEATURES: FeatureItem[] = [
       "Collaborative workflows, agent dashboards",
       "Deep client/property profiles, secure doc management",
     ],
-   image: "/service2.svg",
+    image: "/service2.svg",
     reverse: true,
   },
   {
@@ -50,32 +52,66 @@ const FEATURES: FeatureItem[] = [
 ];
 
 const handleScroll = () => {
-    const section = document.getElementById("main");
-    section?.scrollIntoView({ behavior: "smooth" });
-  };
+  const section = document.getElementById("main");
+  section?.scrollIntoView({ behavior: "smooth" });
+};
 
 export default function WhoWeAre() {
   return (
-    <section id="about" className="relative py-32 px-6 sm:px-10 overflow-visible">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(87,204,155,0.12),transparent_60%),linear-gradient(to_bottom,#0a0f0d,#000)]" />
+    <section
+      id="about"
+      className="relative py-32 px-6 sm:px-10 overflow-visible"
+    >
+      {/* Background glow */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="absolute inset-0 -z-10
+          bg-[radial-gradient(ellipse_at_center,rgba(87,204,155,0.12),transparent_60%)]"
+      />
 
       {/* Heading */}
-      <h2 className="text-center text-white text-5xl font-semibold mb-24">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="text-center text-white text-5xl font-semibold mb-24"
+      >
         Who We Are
-      </h2>
+      </motion.h2>
 
       {/* Content */}
       <div className="space-y-32 max-w-7xl mx-auto">
         {FEATURES.map((item, i) => (
-          <div
+          <motion.div
             key={i}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
-              item.reverse ? "lg:flex-row-reverse" : ""
-            }`}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            viewport={{ once: true }}
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center`}
           >
             {/* Text */}
-            <div className={item.reverse ? "lg:order-2" : ""}>
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: item.reverse ? 40 : -40,
+              }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.1,
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              viewport={{ once: true }}
+              className={item.reverse ? "lg:order-2" : ""}
+            >
               <h3 className="text-brand text-3xl sm:text-4xl font-semibold mb-4">
                 {item.title}
               </h3>
@@ -96,14 +132,28 @@ export default function WhoWeAre() {
                 ))}
               </ul>
 
-              <button className="bg-brand cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
-              onClick={handleScroll}>
+              <button
+                className="bg-brand cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
+                onClick={handleScroll}
+              >
                 Learn More
               </button>
-            </div>
+            </motion.div>
 
             {/* Image */}
-            <div
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: item.reverse ? -40 : 40,
+                scale: 0.96,
+              }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{
+                delay: 0.15,
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              viewport={{ once: true }}
               className={`relative flex justify-center ${
                 item.reverse ? "lg:order-1" : ""
               }`}
@@ -116,9 +166,9 @@ export default function WhoWeAre() {
                   height={360}
                   className="object-cover"
                 />
-                </div>
-            </div>
-          </div>
+              </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </section>

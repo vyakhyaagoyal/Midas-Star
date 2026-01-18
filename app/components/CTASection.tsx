@@ -1,23 +1,36 @@
-"use client"
-export default function CTASection() {
+"use client";
 
-    const handleScroll = () => {
+import { motion } from "framer-motion";
+
+export default function CTASection() {
+  const handleScroll = () => {
     const section = document.getElementById("main");
     section?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative min-h-screen bg-black flex items-center justify-center px-6">
+    <section className="relative min-h-screen bg-black flex items-center justify-center px-6 overflow-hidden">
+      
       {/* Outer glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.15),transparent_60%)]" />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(87,204,155,0.12),transparent_60%)]"
+      />
 
       {/* Card */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 40, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        viewport={{ once: true }}
         className="
           relative z-10 w-full max-w-5xl
           rounded-[2.5rem]
           border border-white/10
-          bg-linear-to-br from-[#0f2f25] via-[#0b1f18] to-[#08140f]
+          bg-linear-to-br from-brand/30 via-brand/10 to-brand/5
           px-8 py-16 md:px-16 md:py-20
           text-center
           shadow-[0_0_120px_rgba(34,197,94,0.15)]
@@ -25,19 +38,36 @@ export default function CTASection() {
         "
       >
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-semibold mb-5">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-semibold mb-5"
+        >
           Let’s Transform Your Real Estate Business
-        </h2>
+        </motion.h2>
 
         {/* Description */}
-        <p className="max-w-2xl mx-auto text-sm md:text-base text-white/70 leading-relaxed mb-10">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25, duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto text-sm md:text-base text-white/70 leading-relaxed mb-10"
+        >
           Ready to boost your agency’s growth with digital solutions built for
-          Dubai? Get in touch and we’ll show you how Midas Star can help—quickly and
-          reliably.
-        </p>
+          Dubai? Get in touch and we’ll show you how Midas Star can help—quickly
+          and reliably.
+        </motion.p>
 
         {/* Button */}
-        <button
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+          onClick={handleScroll}
           className="
             inline-flex items-center gap-2
             rounded-lg bg-brand
@@ -47,11 +77,10 @@ export default function CTASection() {
             transition-colors
             cursor-pointer
           "
-          onClick={handleScroll}
         >
           Contact Us
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     </section>
   );
 }
