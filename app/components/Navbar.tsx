@@ -8,7 +8,7 @@ export default function Navbar() {
 
         {/* Left: Logo */}
         <div className="flex items-center">
-          <Image src='/midas_star_logo_transparent.png' alt='Midas Star Logo' width={200} height={200}/>
+          <Image src='/midas_star_logo2.png' alt='Midas Star Logo' width={200} height={200}/>
         </div>
 
         {/* Center: Links */}
