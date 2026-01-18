@@ -11,15 +11,6 @@ export default function CTASection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-      
-      {/* Outer glow */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(87,204,155,0.12),transparent_60%)]"
-      />
 
       {/* Card */}
       <motion.div
