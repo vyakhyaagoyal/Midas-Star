@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { MessageCircle, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -22,6 +22,7 @@ export default function Footer() {
 
             {/* Social icons */}
             <div className="flex items-center gap-4 mt-5 text-white/70">
+                  <MessageCircle className="w-4 h-4 hover:text-white cursor-pointer" />
               <Instagram className="w-4 h-4 hover:text-white cursor-pointer" />
               <Linkedin className="w-4 h-4 hover:text-white cursor-pointer" />
               <Twitter className="w-4 h-4 hover:text-white cursor-pointer" />
@@ -48,7 +49,7 @@ export default function Footer() {
             <h4 className="text-sm font-medium mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li className="hover:text-white cursor-pointer">
-                contact@homeey.com
+                contact@midasstar.com
               </li>
               <li className="hover:text-white cursor-pointer">
                 +12345678912

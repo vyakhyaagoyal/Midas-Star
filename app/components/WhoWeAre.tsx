@@ -19,7 +19,7 @@ const FEATURES: FeatureItem[] = [
       "Built-in lead capture (forms, WhatsApp chat, instant inquiry)",
       "SEO-ready for Dubai property market",
     ],
-    image: "/sample_image.jpg",
+    image: "/service1.svg",
   },
   {
     title: "Real Estate CRM for Maximum Sales Productivity.",
@@ -31,7 +31,7 @@ const FEATURES: FeatureItem[] = [
       "Collaborative workflows, agent dashboards",
       "Deep client/property profiles, secure doc management",
     ],
-    image: "/sample_image.jpg",
+   image: "/service2.svg",
     reverse: true,
   },
   {
@@ -44,7 +44,7 @@ const FEATURES: FeatureItem[] = [
       "Automated updates—no more manual data entry",
       "Developer-ready documentation and support",
     ],
-    image: "/sample_image.jpg",
+    image: "/service3.svg",
   },
 ];
 

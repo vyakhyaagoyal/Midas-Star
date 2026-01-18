@@ -1,35 +1,35 @@
-import { MapPin, Timer, User, BarChart3, ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 const features = [
   {
     title: "Dubai Market Specialists",
     description:
       "We design every solution around Dubai’s unique real estate workflows—delivering digital platforms that anticipate your market’s needs while meeting the highest international standards.",
-    icon: MapPin,
+    icon: "/location.svg",
     span: "col-span-2",
   },
   {
     title: "Rapid, Proven Launch Process",
     description:
       "With a clear, battle-tested delivery process, we bring your property websites and tools to market quickly—ensuring quality without delay or guesswork, so you're never behind your competition.",
-    icon: Timer,
+    icon: "/time.svg",
     span: "col-span-2",
   },
   {
     title: "Reliable Support, Clear Pricing",
     description:
       "Always-on support and honest, transparent pricing—no surprises.",
-    icon: User,
+    icon: "/contact.svg",
   },
   {
     title: "Built to Scale with You",
     description: "Platforms that grow effortlessly as your agency expands.",
-    icon: BarChart3,
+    icon:"/bar.svg",
   },
   {
     title: "Unmatched Security & Compliance",
     description: "Industry-standard security, built for Dubai regulations.",
-    icon: ShieldCheck,
+    icon: "/shield.svg",
   },
 ];
 
@@ -59,9 +59,8 @@ export default function WhyHomeey() {
           bg-gradient-to-br from-[#0f3b2e]/80 to-[#0b1f18]/80
           p-6 backdrop-blur-xl"
         >
-          <div className="mb-4 w-10 h-10 rounded-full flex items-center justify-center
-            bg-green-500/10 text-green-400">
-            <Icon size={22} />
+          <div className="mb-4 w-10 h-10 rounded-full flex items-center justify-center">
+            <Image src={item.icon} alt={item.title} width={200} height={200} />
           </div>
 
           <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -85,9 +84,8 @@ export default function WhyHomeey() {
           bg-gradient-to-br from-[#0f3b2e]/80 to-[#0b1f18]/80
           p-6 backdrop-blur-xl"
         >
-          <div className="mb-4 w-10 h-10 rounded-full flex items-center justify-center
-            bg-green-500/10 text-green-400">
-            <Icon size={22} />
+          <div className="mb-4 w-10 h-10 rounded-full flex items-center justify-center">
+            <Image src={item.icon} alt={item.title} width={300} height={300} />
           </div>
 
           <h3 className="text-lg font-semibold mb-2">{item.title}</h3>

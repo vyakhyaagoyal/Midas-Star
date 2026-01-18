@@ -1,9 +1,9 @@
 export default function Testimonials() {
   const testimonials = [
-    "Our sales increased by 28% in three months—Homeey’s CRM made the difference.",
-    "Our sales increased by 28% in three months—Homeey’s CRM made the difference.",
-    "Our sales increased by 28% in three months—Homeey’s CRM made the difference.",
-    "Our sales increased by 28% in three months—Homeey’s CRM made the difference.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum. Repellat nesciunt ut laboriosam a, architecto e. Dolores quam nulla aliquam.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum. Repellat nesciunt ut laboriosam a, architecto eaDolores quam nulla aliquam.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum. Repellat nesciunt ut laboriosam a, architecto eaquDolores quam nulla aliquam.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum. Repellat nesciunt ut laboriosam a, architecto ro. Dolores quam nulla aliquam.",
   ];
 
   return (
