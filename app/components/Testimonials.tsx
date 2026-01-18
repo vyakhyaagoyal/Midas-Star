@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Testimonials() {
   const testimonials = [
@@ -51,28 +52,43 @@ export default function Testimonials() {
       >
         {testimonials.map((text, index) => (
           <motion.div
-            key={index}
-            variants={{
-              hidden: { opacity: 0, y: 30, scale: 0.97 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                transition: {
-                  duration: 0.6,
-                  ease: [0.22, 1, 0.36, 1],
-                },
-              },
-            }}
-            whileHover={{ scale: 1.04 }}
-            transition={{ type: "tween", duration: 0.25 }}
-            className="rounded-2xl border border-white/10 bg-white/3 px-8 py-10
-              text-gray-200 backdrop-blur-sm
-              shadow-[0_0_0_1px_rgba(87,204,155,0.15)]
-              cursor-default"
-          >
-            <p className="text-sm leading-relaxed">{text}</p>
-          </motion.div>
+  key={index}
+  variants={{
+    hidden: { opacity: 0, y: 30, scale: 0.97 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  }}
+  whileHover={{ y: -8 }}
+  transition={{ type: "tween", duration: 0.25 }}
+  className="relative group rounded-2xl border border-white/10 bg-white/3
+    px-8 py-10 text-gray-200 backdrop-blur-sm
+    shadow-[0_0_0_1px_rgba(87,204,155,0.15)]
+    cursor-default"
+>
+  <p className="text-sm leading-relaxed">{text}</p>
+
+  {/* Quote icon */}
+  <Image
+    src="/testimonials_1.svg"
+    width={40}
+    height={40}
+    alt="quote icon"
+    className="
+      absolute top-4 right-4
+      opacity-50
+      group-hover:opacity-100
+      transition-opacity duration-300
+    "
+  />
+</motion.div>
+
         ))}
       </motion.div>
     </section>

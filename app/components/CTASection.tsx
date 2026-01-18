@@ -9,7 +9,7 @@ export default function CTASection() {
   };
 
   return (
-    <section className="relative min-h-screen bg-black flex items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
       
       {/* Outer glow */}
       <motion.div

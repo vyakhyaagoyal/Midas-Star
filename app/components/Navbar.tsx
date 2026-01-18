@@ -14,7 +14,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="w-full fixed top-0 z-50 backdrop-blur-xl"
+      className="w-full fixed top-0 z-50 backdrop-blur-md"
     >
       <nav className="mx-auto flex items-center justify-between px-12 py-2 rounded-xl max-w-8xl">
         

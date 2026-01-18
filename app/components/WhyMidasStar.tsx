@@ -43,7 +43,7 @@ export default function WhyHomeey() {
   return (
     <section
       id="services"
-      className="min-h-screen bg-black text-white px-6 py-20 relative overflow-visible"
+      className="min-h-screen text-white px-6 py-20 relative overflow-visible"
     >
       {/* Heading */}
       <motion.h2
@@ -87,7 +87,7 @@ export default function WhyHomeey() {
                   },
                 },
               }}
-              whileHover={{ scale: 1.04 }}
+              whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
               className="col-span-2 relative rounded-2xl border border-white/10
                 bg-linear-to-br from-brand/30 via-brand/10 to-brand/5
@@ -134,7 +134,7 @@ export default function WhyHomeey() {
                   },
                 },
               }}
-              whileHover={{ scale: 1.04 }}
+              whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
               className="relative rounded-2xl border border-white/10
                 bg-linear-to-br from-brand/30 via-brand/10 to-brand/5
