@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 export default function CTASection() {
   const handleScroll = () => {
@@ -69,9 +70,9 @@ export default function CTASection() {
           viewport={{ once: true }}
           onClick={handleScroll}
           className="
-            inline-flex items-center gap-2
+            group inline-flex items-center gap-1.5
             rounded-lg bg-brand
-            px-6 py-3
+            px-6 py-2.5
             text-sm font-medium text-black
             hover:bg-brand/90
             transition-colors
@@ -79,6 +80,14 @@ export default function CTASection() {
           "
         >
           Contact Us
+          <ArrowUpRight
+            className="
+      w-4 h-4
+      transition-transform duration-300 ease-out
+      group-hover:rotate-45
+      group-hover:translate-x-1
+    "
+          />
         </motion.button>
       </motion.div>
     </section>

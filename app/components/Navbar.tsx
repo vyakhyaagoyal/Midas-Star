@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Navbar() {
   const scrollTo = (id: string) => {
@@ -70,11 +71,20 @@ export default function Navbar() {
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
           onClick={() => scrollTo("main")}
-          className="bg-brand cursor-pointer text-black px-5 py-2
-            rounded-xl font-medium hover:opacity-90 transition"
+          className="group inline-flex items-center gap-1.5 bg-brand cursor-pointer text-black px-6 py-2.5
+            rounded-xl font-bold hover:opacity-90 transition"
         >
           Contact Us
+          <ArrowUpRight
+            className="
+      w-4 h-4
+      transition-transform duration-300 ease-out
+      group-hover:rotate-45
+      group-hover:translate-x-1
+    "
+          />
         </motion.button>
+        
       </nav>
     </motion.header>
   );

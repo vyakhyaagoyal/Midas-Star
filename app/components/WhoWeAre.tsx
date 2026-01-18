@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 type FeatureItem = {
   title: string;
@@ -133,10 +134,18 @@ export default function WhoWeAre() {
               </ul>
 
               <button
-                className="bg-brand cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
+                className="group inline-flex items-center gap-1.5 bg-brand cursor-pointer text-black px-6 py-2.5 rounded-xl font-bold hover:opacity-90 transition"
                 onClick={handleScroll}
               >
                 Learn More
+                <ArrowUpRight
+            className="
+      w-4 h-4
+      transition-transform duration-300 ease-out
+      group-hover:rotate-45
+      group-hover:translate-x-1
+    "
+          />
               </button>
             </motion.div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   const handleScroll = () => {
@@ -29,10 +30,7 @@ export default function Hero() {
           className="text-5xl md:text-6xl font-bold leading-tight text-white"
         >
           Empowering Dubai Real Estate <br />
-          with{" "}
-          <span className="text-brand">
-            Advanced IT Solutions
-          </span>
+          with <span className="text-brand">Advanced IT Solutions</span>
         </motion.h1>
 
         {/* Description */}
@@ -43,7 +41,8 @@ export default function Hero() {
           viewport={{ once: true }}
           className="mt-10 text-gray-300"
         >
-          We build powerful websites, CRMs, and API integrations that drive <br />
+          We build powerful websites, CRMs, and API integrations that drive{" "}
+          <br />
           growth for Dubai’s leading real estate agencies
         </motion.p>
 
@@ -54,10 +53,21 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.55, ease: "easeOut" }}
           viewport={{ once: true }}
           onClick={handleScroll}
-          className="mt-6 bg-brand font-bold text-black px-6 py-2.5 rounded-xl
-            hover:opacity-90 transition cursor-pointer"
+          className="
+    group inline-flex items-center gap-1.5 mt-6
+    bg-brand font-bold text-black px-6 py-2.5 rounded-xl
+    hover:opacity-90 transition cursor-pointer
+  "
         >
           Explore our solutions
+          <ArrowUpRight
+            className="
+      w-4 h-4
+      transition-transform duration-300 ease-out
+      group-hover:rotate-45
+      group-hover:translate-x-1
+    "
+          />
         </motion.button>
       </motion.div>
     </section>
