@@ -19,7 +19,7 @@ export default function CTASection() {
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true }}
         className="
-          relative z-10 w-full max-w-5xl
+          relative z-10 w-full max-w-6xl
           rounded-[2.5rem]
           border border-white/10
           bg-linear-to-br from-brand/30 via-brand/10 to-brand/5
@@ -64,7 +64,7 @@ export default function CTASection() {
             rounded-lg bg-brand-secondary
             px-6 py-2.5
             text-sm font-medium text-black
-            hover:bg-brand/90
+            hover:bg-brand
             transition-colors
             cursor-pointer
           "

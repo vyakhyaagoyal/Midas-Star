@@ -62,20 +62,7 @@ export default function WhoWeAre() {
       id="about"
       className="relative py-32 px-6 sm:px-10 overflow-visible"
     >
-      {/* Background glow */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="
-    absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-    w-[280px] h-[280px]
-    brand-blob
-    -z-10
-  "
-      />
-
+    
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
@@ -91,16 +78,35 @@ export default function WhoWeAre() {
       <div className="space-y-32 max-w-7xl mx-auto">
         {FEATURES.map((item, i) => (
           <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            viewport={{ once: true }}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-start`}
-          >
+  key={i}
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.8,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+  viewport={{ once: true }}
+  className="
+    relative
+    grid grid-cols-1 lg:grid-cols-2
+    gap-16 items-start
+  "
+>
+<motion.div
+  initial={{ opacity: 0, scale: 0.85 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.1, ease: "easeOut" }}
+  viewport={{ once: true }}
+  className={`
+  absolute top-1/2
+  ${item.reverse ? "left-[70%]" : "right-[55%]"}
+  -translate-x-1/2 -translate-y-1/2
+  w-50 h-50
+  brand-blob
+  -z-10
+`}
+/>
+
             {/* Text */}
             <motion.div
               initial={{
@@ -139,7 +145,7 @@ export default function WhoWeAre() {
               </ul>
 
               <button
-                className="group inline-flex items-center gap-1.5 bg-brand-secondary cursor-pointer text-black px-6 py-2.5 rounded-xl font-bold hover:opacity-90 transition"
+                className="group inline-flex items-center gap-1.5 bg-brand-secondary cursor-pointer text-black px-6 py-2.5 rounded-xl font-bold hover:bg-brand transition"
                 onClick={handleScroll}
               >
                 Learn More

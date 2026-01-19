@@ -13,19 +13,6 @@ export default function Testimonials() {
 
   return (
     <section className="relative py-32 px-6 sm:px-10 overflow-visible">
-      {/* Background glow */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        viewport={{ once: true }}
-  //       className="
-  //   absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-  //   w-[280px] h-[280px]
-  //   brand-blob
-  //   -z-10
-  // "
-      />
 
       {/* Heading */}
       <motion.h2
@@ -51,7 +38,7 @@ export default function Testimonials() {
             },
           },
         }}
-        className="mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        className="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
       >
         {testimonials.map((text, index) => (
           
@@ -80,7 +67,7 @@ export default function Testimonials() {
             <p className="text-sm leading-relaxed">{text}</p>
 
             {/* Quote icon */}
-            <Image
+            {/* <Image
               src="/testimonials_1.svg"
               width={40}
               height={40}
@@ -91,7 +78,7 @@ export default function Testimonials() {
       group-hover:opacity-100
       transition-opacity duration-300
     "
-            />
+            /> */}
           </motion.div>
         ))}
       </motion.div>

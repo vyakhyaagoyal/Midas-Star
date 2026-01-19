@@ -25,7 +25,7 @@ export default function Navbar() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.15, duration: 0.4, ease: "easeOut" }}
-          className="flex items-center text-brand gap-2"
+          className="flex items-center text-brand gap-1.5"
         >
           <div>
             <Image
@@ -49,44 +49,61 @@ export default function Navbar() {
           />
         </motion.div>
 
-        {/* Center: Links */}
-        <ul className="hidden md:flex items-center gap-10 text-lg text-gray-300">
-          {[
-            { label: "About", id: "about" },
-            { label: "Services", id: "services" },
-            { label: "Contact", id: "main" },
-          ].map((item, i) => (
-            <motion.li
-              key={item.label}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.2 + i * 0.08,
-                duration: 0.4,
-                ease: "easeOut",
-              }}
-              onClick={() => scrollTo(item.id)}
-              className="relative cursor-pointer
-                after:absolute after:-bottom-1 after:left-0 after:h-0.5
-                after:w-0 after:bg-brand hover:after:w-full
-                after:transition-all"
-            >
-              {item.label}
-            </motion.li>
-          ))}
-        </ul>
-<p>Pick your theme</p>
-<BrandColourPicker/>
+        {/* Center: Links + Theme Picker */}
+<div className="hidden md:flex items-center gap-10">
+
+  {/* Nav links */}
+  <ul className="flex items-center gap-10 text-lg text-gray-300">
+    {[
+      { label: "About", id: "about" },
+      { label: "Services", id: "services" },
+      { label: "Contact", id: "main" },
+    ].map((item, i) => (
+      <motion.li
+        key={item.label}
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.2 + i * 0.08,
+          duration: 0.4,
+          ease: "easeOut",
+        }}
+        onClick={() => scrollTo(item.id)}
+        className="relative cursor-pointer
+          after:absolute after:-bottom-1 after:left-0 after:h-0.5
+          after:w-0 after:bg-brand hover:after:w-full
+          after:transition-all"
+      >
+        {item.label}
+      </motion.li>
+    ))}
+  </ul>
+
+  {/* Divider */}
+  <div className="h-6 w-px bg-white/15" />
+
+  {/* Theme picker */}
+  <div
+    className="flex items-center gap-3 px-4 py-1.5
+      rounded-full bg-white/5 backdrop-blur-md
+      border border-white/10"
+  >
+    <span className="text-xs uppercase tracking-wider text-white/60">
+      Theme
+    </span>
+    <BrandColourPicker />
+  </div>
+
+</div>
+
         {/* Right: CTA */}
         <motion.button
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.4, ease: "easeOut" }}
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.97 }}
           onClick={() => scrollTo("main")}
           className="group inline-flex items-center gap-1.5 bg-brand-secondary cursor-pointer text-black px-6 py-2.5
-            rounded-xl font-bold hover:opacity-90 transition"
+            rounded-xl font-bold hover:bg-brand transition"
         >
           Contact Us
         </motion.button>
