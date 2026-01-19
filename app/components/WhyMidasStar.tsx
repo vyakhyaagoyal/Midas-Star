@@ -39,7 +39,7 @@ const features = [
 const topFeatures = features.slice(0, 2);
 const bottomFeatures = features.slice(2);
 
-export default function WhyHomeey() {
+export default function WhyMidasStar() {
   return (
     <section
       id="services"

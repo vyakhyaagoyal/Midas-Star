@@ -1,5 +1,6 @@
 import { MessageCircle, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -31,10 +32,18 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-4 text-white/70">
-              <MessageCircle className="w-5 h-5 hover:text-white transition cursor-pointer" />
+            <Link href="#">
+            <MessageCircle className="w-5 h-5 hover:text-white transition cursor-pointer" />
+            </Link>
+              <Link href="#">
               <Instagram className="w-5 h-5 hover:text-white transition cursor-pointer" />
+              </Link>
+              <Link href="#">
               <Linkedin className="w-5 h-5 hover:text-white transition cursor-pointer" />
+              </Link>
+              <Link href="#">
               <Twitter className="w-5 h-5 hover:text-white transition cursor-pointer" />
+              </Link>
             </div>
           </div>
 
