@@ -19,8 +19,12 @@ export default function Testimonials() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="absolute inset-0 -z-10
-          bg-[radial-gradient(ellipse_at_center,rgba(87,204,155,0.1),transparent_60%)]"
+  //       className="
+  //   absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  //   w-[280px] h-[280px]
+  //   brand-blob
+  //   -z-10
+  // "
       />
 
       {/* Heading */}

@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import BrandColourPicker from "./BrandColourPicker";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const scrollTo = (id: string) => {
@@ -23,14 +25,26 @@ export default function Navbar() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.15, duration: 0.4, ease: "easeOut" }}
-          className="flex items-center"
+          className="flex items-center text-brand gap-2"
         >
-          <Image
-            src="/midas_star_logo2.png"
+          <div>
+            <Image
+            src="/star_logo_only.png"
             alt="Midas Star Logo"
-            width={200}
-            height={200}
-            className="cursor-pointer"
+            width={30}
+            height={30}
+            className="cursor-pointer ml-3"
+            onClick={() => scrollTo("main")}
+          />
+          <Logo className="w-36 cursor-pointer" onClick={() => scrollTo("main")}/>
+          </div>
+          
+          <Image
+            src="/star_only.png"
+            alt="Midas Star Logo"
+            width={55}
+            height={55}
+            className="cursor-pointer mt-6.5"
             onClick={() => scrollTo("main")}
           />
         </motion.div>
@@ -61,7 +75,8 @@ export default function Navbar() {
             </motion.li>
           ))}
         </ul>
-
+<p>Pick your theme</p>
+<BrandColourPicker/>
         {/* Right: CTA */}
         <motion.button
           initial={{ opacity: 0, y: -10 }}

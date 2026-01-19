@@ -6,15 +6,19 @@ export default function EmpowerSection() {
   return (
     <section className="relative w-full py-32 px-6 sm:px-10 overflow-visible">
       
-      {/* Background glow */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="absolute inset-0 -z-10
-          bg-[radial-gradient(ellipse_at_center,rgba(87,204,155,0.2),transparent_60%)]"
-      />
+      {/* Background blob */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
+  viewport={{ once: true }}
+  className="
+    absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+    w-[280px] h-[280px]
+    brand-blob
+    -z-10
+  "
+/>
 
       {/* Content */}
       <motion.div
