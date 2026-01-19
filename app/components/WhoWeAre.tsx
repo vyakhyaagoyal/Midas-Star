@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 
 type FeatureItem = {
   title: string;
@@ -96,7 +95,7 @@ export default function WhoWeAre() {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center`}
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-start`}
           >
             {/* Text */}
             <motion.div
@@ -111,9 +110,11 @@ export default function WhoWeAre() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               viewport={{ once: true }}
-              className={item.reverse ? "lg:order-2" : ""}
+              className={item.reverse ? "lg:order-2 mt-5" : "mt-5 ml-7"}
             >
-              <h3 className="text-brand text-3xl sm:text-4xl font-semibold mb-4">
+              <h3 className="bg-linear-to-r from-white/90 via-brand to-brand
+    bg-clip-text text-transparent
+    text-3xl sm:text-4xl font-semibold mb-4">
                 {item.title}
               </h3>
 
@@ -134,18 +135,11 @@ export default function WhoWeAre() {
               </ul>
 
               <button
-                className="group inline-flex items-center gap-1.5 bg-brand cursor-pointer text-black px-6 py-2.5 rounded-xl font-bold hover:opacity-90 transition"
+                className="group inline-flex items-center gap-1.5 bg-brand-secondary cursor-pointer text-black px-6 py-2.5 rounded-xl font-bold hover:opacity-90 transition"
                 onClick={handleScroll}
               >
                 Learn More
-                <ArrowUpRight
-            className="
-      w-4 h-4
-      transition-transform duration-300 ease-out
-      group-hover:rotate-45
-      group-hover:translate-x-1
-    "
-          />
+                
               </button>
             </motion.div>
 
@@ -164,7 +158,7 @@ export default function WhoWeAre() {
               }}
               viewport={{ once: true }}
               className={`relative flex justify-center ${
-                item.reverse ? "lg:order-1" : ""
+                item.reverse ? "lg:order-1 mr-40" : "ml-40"
               }`}
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">

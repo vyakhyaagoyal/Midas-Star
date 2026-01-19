@@ -25,7 +25,6 @@ export default function CTASection() {
           bg-linear-to-br from-brand/30 via-brand/10 to-brand/5
           px-8 py-16 md:px-16 md:py-20
           text-center
-          shadow-[0_0_120px_rgba(34,197,94,0.15)]
           backdrop-blur-xl
         "
       >
@@ -62,7 +61,7 @@ export default function CTASection() {
           onClick={handleScroll}
           className="
             group inline-flex items-center gap-1.5
-            rounded-lg bg-brand
+            rounded-lg bg-brand-secondary
             px-6 py-2.5
             text-sm font-medium text-black
             hover:bg-brand/90
