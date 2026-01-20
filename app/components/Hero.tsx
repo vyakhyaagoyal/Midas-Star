@@ -39,7 +39,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mt-10 text-gray-300"
+          className="mt-8 text-gray-300 text-md"
         >
           We build powerful websites, CRMs, and API integrations that drive{" "}
           <br />
