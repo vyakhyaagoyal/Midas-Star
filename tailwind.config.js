@@ -11,6 +11,9 @@ export default {
         brand: "var(--brand-primary)",
         "brand-secondary": "var(--brand-secondary)",
       },
+      fontFamily: {
+        sans: ["var(--font-plus-jakarta)", "sans-serif"],
+      },
     },
   },
   plugins: [],
