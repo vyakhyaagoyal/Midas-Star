@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import BrandColourPicker from "./BrandColourPicker";
 import Logo from "./Logo";
 
 export default function Navbar() {
@@ -79,20 +78,7 @@ export default function Navbar() {
     ))}
   </ul>
 
-  {/* Divider */}
-  <div className="h-6 w-px bg-white/15" />
-
-  {/* Theme picker */}
-  <div
-    className="flex items-center gap-3 px-4 py-1.5
-      rounded-full bg-white/5 backdrop-blur-md
-      border border-white/10"
-  >
-    <span className="text-xs uppercase tracking-wider text-white/60">
-      Theme
-    </span>
-    <BrandColourPicker />
-  </div>
+  
 
 </div>
 
